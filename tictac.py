@@ -33,10 +33,10 @@ def chooseSpot(currentPlayer, board):
 
 def nextPlayer(currentPlayer):
     if currentPlayer == "O":
-        currentPlayer == "X"
+        return "X"
     elif currentPlayer == "X":
-        currentPlayer == "O"
-    return currentPlayer
+        return "O"
+    
 
 def checkGame(board):
     if (board[0] == board[1] == board[2] or board[3] == board[4] == board[5] or
