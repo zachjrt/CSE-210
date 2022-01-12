@@ -1,10 +1,11 @@
 """
 Author: Zach Thompson
 """
-gamePlay = True;
+
+gamePlay= True;
 
 def main():
-    currentPlayer = "none"
+    currentPlayer = "X"
     nextPlayer(currentPlayer)
     board = makeBoard()
     while (gamePlay):
@@ -31,8 +32,8 @@ def chooseSpot(currentPlayer, board):
     checkGame(board)
 
 def nextPlayer(currentPlayer):
-    if currentPlayer == "none" or currentPlayer == "O":
-        currentPlayer == "X";
+    if currentPlayer == "O":
+        currentPlayer == "X"
     elif currentPlayer == "X":
         currentPlayer == "O"
     return currentPlayer
@@ -42,6 +43,10 @@ def checkGame(board):
         board[6] == board[7] == board[8] or board[0] == board[3] == board[6] or
         board[1] == board[4] == board[7] or board[2] == board[5] == board[8] or
         board[0] == board[4] == board[8] or board[2] == board[4] == board[6]):
+        print()
+        showBoard(board)
+        print("Good Game. Thanks for playing!")
+        global gamePlay;
         gamePlay = False;
     else:
         gamePlay = True;
